@@ -1,0 +1,90 @@
+
+
+let products= [
+    {name:"Iphone15", Price:50, Description: 'Latest Phone in Town, Abba Made', image: 'assets/1.jpg' },
+    {name:"Tecno 12", Price:90, Description: 'This product is very okay', image: 'assets/2.jpg'},
+    {name:"camon", Price:19, Description: 'camon the best', image: 'assets/3.jpg'},
+    {name:"samsung", Price:64, Description: 'Made by Buhari', image: 'assets/7.jpg'}
+    
+    ]   
+    
+//     // alert(products[3].name + ' ' + products[3].Price +' '+ products[3].Description)
+    
+    let text = []
+    
+    for(let i=0; i<products.length; i++){
+    text+= `
+    <div style="display:flex; flex-direction:column"> <div class="card" style="width: 18rem;>
+    <div class="card" style="width: 18rem;">
+    <img src="${products[i].image}" class="card-img-top" alt="...">
+    <div class="card-body"><h5 class="card-title"> ${products[i].name} </h5>
+    <h4 style="color:red">$  ${products[i].Price} </h4>
+    <p class="card-text">${products[i].Description}</p>
+    <a href="#" class="btn btn-primary">Add to Cart</a>
+    </div></div></div> </div> 
+   `
+    
+    }
+    document.getElementById("demo").innerHTML = text
+
+    // function search(){
+    //    let dd =  document.getElementById('ser').value
+    //    let tt = Number(dd);
+    // //    alert(tt)
+    //     products.find(el=>el.Price>tt)
+    //     return;
+    // // document.getElementById("demo").innerHTML = newp
+function search(){
+    let dd =  document.getElementById('ser').value
+    
+let products= [
+    {name:"Iphone15", Price:50, Description: 'Latest Phone in Town, Abba Made', image: 'assets/1.jpg' },
+    {name:"Tecno 12", Price:90, Description: 'This product is very okay', image: 'assets/2.jpg'},
+    {name:"camon", Price:19, Description: 'camon the best', image: 'assets/3.jpg'},
+    {name:"samsung", Price:64, Description: 'Made by Buhari', image: 'assets/7.jpg'}
+    
+    ]   
+    
+    // let tt = Number(dd);
+
+    const alligator = ["thick scales", 80, "4 foot tail", "rounded snout"];
+    // for(let i=0; products.length; i++){
+let rr = products.find(el => el.name == dd);
+const newp = products.map(el=>el.name);
+if(newp.includes(dd)){
+    document.getElementById("demo").innerHTML = `
+    <div style="display:flex; flex-direction:column"> <div class="card" style="width: 18rem;>
+    <div class="card" style="width: 18rem;">
+    <img src="${rr.image}" class="card-img-top" alt="...">
+    <div class="card-body"><h5 class="card-title"> ${rr.name} </h5>
+    <h4 style="color:red">$  ${rr.Price} </h4>
+    <p class="card-text">${rr.Description}</p>
+    <a href="#" class="btn btn-primary">Add to Cart</a>
+    </div></div></div> </div> 
+    `
+}
+else{
+    document.getElementById("demo").innerHTML ='No products match'
+}
+// newp.includes(dd)
+// returns '4 foot tail'
+
+
+    // }
+// let text
+// for(let i=0; i<rr.length; i++){
+    //     text+= `
+    //     <div style="display:flex; flex-direction:column"> <div class="card" style="width: 18rem;>
+    //     <div class="card" style="width: 18rem;">
+    //     <img src="${rr[i].image}" class="card-img-top" alt="...">
+    //     <div class="card-body"><h5 class="card-title"> ${rr[i].name} </h5>
+    //     <h4 style="color:red">$  ${rr[i].Price} </h4>
+    //     <p class="card-text">${rr[i].Description}</p>
+    //     <a href="#" class="btn btn-primary">Add to Cart</a>
+    //     </div></div></div> </div> 
+    //    `
+
+// }
+}
+
+    // }

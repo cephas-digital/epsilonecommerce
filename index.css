@@ -1,0 +1,34 @@
+.cart-info{
+
+/* display: none;
+ */
+ overflow: hidden;
+ top: 0;
+ right: 0;
+
+ width: 0;
+ position: absolute;
+
+}
+
+.show-cart{
+    /* display: block;
+     */ 
+
+     width: 18rem;
+    background-color: aqua;
+    margin-left: 20px;
+    transition: 2s ease-in-out !important;
+    margin-top: 2 0px;
+    /* transform: rotateX(360deg); */
+  transform: rotateY(-360deg);
+
+    
+}
+
+/* 
+.dammy{
+    display: block;
+  
+} */
+
